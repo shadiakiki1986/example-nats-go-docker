@@ -12,3 +12,11 @@ go get github.com/nats-io/go-nats
 go run publish.go
 ```
 
+# References
+Here are links that helped me
+* https://jacobmartins.com/2016/06/06/practical-golang-getting-started-with-nats-and-related-patterns/
+* https://github.com/Logimethods/docker-nats-connector-spark/blob/d1d83ebc4fc281250487ccb48751a536464021e8/compose/docker-compose.no-cluster.yml
+* https://github.com/nats-io/go-nats
+* http://nats.io/documentation/clients/nats-clients/
+* https://hub.docker.com/_/nats/
+
