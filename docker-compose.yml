@@ -14,3 +14,8 @@ services:
       dockerfile: Dockerfile
     depends_on:
     - nats
+    # https://github.com/Logimethods/docker-nats-connector-spark/blob/d1d83ebc4fc281250487ccb48751a536464021e8/compose/docker-compose.no-cluster.yml
+    links:
+    - nats
+    environment:
+    - NATS_URI=nats://nats:4222

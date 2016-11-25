@@ -1,6 +1,8 @@
 FROM golang:alpine
+RUN apk update \
+  && apk add git
 WORKDIR /code
 COPY . .
-RUN export GOPATH=`pwd` \
-  && go get github.com/nats-io/go-nats \
-  && go run main.go
+ENV GOPATH=/code
+RUN go get github.com/nats-io/go-nats
+ENTRYPOINT sleep 5 && go run main.go

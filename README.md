@@ -2,11 +2,13 @@
 Example docker setup to run a nats server, a nats-go listener, and a nats-go requester
 
 # Usage
-1. run nats server and listener: `docker-composer up`
-2. test with sample publisher
+1. run nats server and listener: `docker-compose up`
+2. Verify subscriptions=1 at: http://localhost:8222/subsz
+3. test with sample publisher
 ```
 apt-get install golang # https://wiki.ubuntu.com/Go
 export GOPATH=`pwd`
 go get github.com/nats-io/go-nats
 go run publish.go
 ```
+

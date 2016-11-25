@@ -3,11 +3,17 @@ package main
 import (
     "github.com/nats-io/go-nats"
     "fmt"
+    "os"
 //    "sync"
 )
 
 func main() {
-  nc, _ := nats.Connect(nats.DefaultURL)
+  // url := nats.DefaultURL
+  // url := "nats://nats-main:4222"
+  url := os.Getenv("NATS_URI")
+  nc, _ := nats.Connect(url)
+
+  fmt.Printf("Starting listener on: %s\n", url)
 
   // Simple Publisher
   //nc.Publish("foo", []byte("Hello World"))
@@ -24,5 +30,6 @@ func main() {
 //  wg := sync.WaitGroup{}
 //  wg.Wait()
 
+  fmt.Printf("Listening for messages\n")
   select {} // Block forever
 }
