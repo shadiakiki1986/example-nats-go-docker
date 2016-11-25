@@ -1,0 +1,16 @@
+version: '2'
+services:
+  nats:
+    # https://hub.docker.com/_/nats/
+    image: nats
+    ports:
+    - 4222:4222
+    - 8222:8222
+    - 6222:6222
+
+  listener:
+    build:
+      context: listener
+      dockerfile: Dockerfile
+    depends_on:
+    - nats
