@@ -12,6 +12,9 @@ go get github.com/nats-io/go-nats
 go run publish.go
 ```
 
+# Related
+[example-nats-cli-docker-compose](https://github.com/shadiakiki1986/example-nats-cli-docker-compose)
+
 # References
 Here are links that helped me
 * https://jacobmartins.com/2016/06/06/practical-golang-getting-started-with-nats-and-related-patterns/
